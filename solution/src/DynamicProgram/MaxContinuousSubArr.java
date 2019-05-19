@@ -22,24 +22,6 @@ public class MaxContinuousSubArr {
         return maxSum;
     }
 
-    public int maxProfit(int[] prices) {
-        // 每个数，记住左边最小的值
-        if( prices.length <= 1){
-            return 0;
-        }
-        int min = prices[0];
-        int maxProfit = 0;
-        for( int price : prices){
-            if (min > price){
-                min = price;
-            }
-            if( price - min > maxProfit){
-                maxProfit =  price - min;
-            }
-        }
-        return maxProfit;
-    }
-
     public boolean divisorGame(int N) {
 
         boolean[] win = new boolean[N + 2];
