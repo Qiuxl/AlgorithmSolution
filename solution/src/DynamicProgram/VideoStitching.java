@@ -100,7 +100,7 @@ public class VideoStitching {
     public static void main(String[] args) {
       //  int[][] arr = new int[][]{{0,2},{4,6},{8,10},{1,9},{1,5},{5,9}};
         long begin = System.currentTimeMillis();
-        for(int i = 0; i < 10000000; i ++){
+        for(int i = 0; i < 10000; i ++){
             int[][] arr = new int[][]{{8,10},{17,39},{18,19},{8,16},{13,35},{33,39},{11,19},{18,35}, {1,2}, {1 ,3}};
             Arrays.sort(arr, new Comparator<int[]>() {
                 @Override
@@ -112,7 +112,7 @@ public class VideoStitching {
        System.out.println("非lambda, 一共耗时: "+ (System.currentTimeMillis() - begin) + " ms");
 
         long begin1 = System.currentTimeMillis();
-        for(int i = 0; i < 10000000; i ++){
+        for(int i = 0; i < 10000; i ++){
             int[][] arr = new int[][]{{8,10},{17,39},{18,19},{8,16},{13,35},{33,39},{11,19},{18,35}, {1,2}, {1 ,3}};
             Arrays.sort(arr, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]);
         }
