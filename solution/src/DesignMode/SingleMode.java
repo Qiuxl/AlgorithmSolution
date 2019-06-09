@@ -13,6 +13,7 @@ public class SingleMode {
     int num;
 
 
+
     public int getNum() {
         return num;
     }
