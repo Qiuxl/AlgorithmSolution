@@ -6,7 +6,8 @@ public class SingleMode {
     }
 
 
-    private static SingleMode singleMode;
+    // 这里最好加上易变的，否则其他线程循环读取缓存的时候，很有可能就有问题了
+    private volatile static SingleMode singleMode;
 
 
     int num;
